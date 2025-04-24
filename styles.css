@@ -1,0 +1,175 @@
+/* Estilos generales y reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #157957;
+    --color-secundario: #1a6bff;
+    --color-destacado: #eec75c;
+    --color-enlace: #ee111c;
+    --color-especial: #f1a707;
+    --color-resaltado: #f822c3;
+    --color-fondo: #a6f8f8;
+    --color-texto: #333;
+    --color-texto-adicional: #214205d2;
+    --sombra-caja: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    padding: 20px;
+}
+
+/* Estructura principal */
+header, main, article, section, aside {
+    margin-bottom: 30px;
+}
+
+/* Estilos para títulos */
+#titulo {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#subtitulo {
+    font-size: 2rem;
+    color: var(--color-secundario);
+    margin: 30px 0 15px;
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 5px;
+}
+
+/* Estilos para párrafos */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Estilos para texto destacado */
+.destacado {
+    font-weight: bold;
+    color: var(--color-destacado);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+/* Estilos para enlaces */
+a {
+    color: var(--color-enlace);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: darken(var(--color-enlace), 15%);
+    text-decoration: underline;
+}
+
+/* Estilos para texto especial */
+.especial {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    color: var(--color-especial);
+    font-weight: bold;
+}
+
+.resaltado {
+    font-style: normal;
+    color: var(--color-resaltado);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0 3px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: var(--sombra-caja);
+    background-color: white;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    caption-side: top;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para el contenido adicional */
+#adicional {
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: var(--sombra-caja);
+}
+
+#adicional h3 {
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+#adicional p {
+    color: var(--color-texto-adicional);
+    margin-bottom: 15px;
+}
+
+#adicional a {
+    color: #e67e22;
+}
+
+#adicional a:hover {
+    color: #b36f37;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    #titulo {
+        font-size: 2rem;
+    }
+    
+    #subtitulo {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
